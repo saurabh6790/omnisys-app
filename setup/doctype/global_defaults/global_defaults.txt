@@ -2,7 +2,7 @@
  {
   "creation": "2013-05-02 17:53:24", 
   "docstatus": 0, 
-  "modified": "2013-10-23 18:06:04", 
+  "modified": "2014-05-06 11:54:19", 
   "modified_by": "Administrator", 
   "owner": "Administrator"
  }, 
@@ -187,6 +187,24 @@
   "fieldname": "time_zone", 
   "fieldtype": "Select", 
   "label": "Time Zone"
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "multi_tenancy_settings", 
+  "fieldtype": "Section Break", 
+  "label": "Multi Tenancy Settings"
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "server_root_password", 
+  "fieldtype": "Password", 
+  "label": "Server Root Password"
+ }, 
+ {
+  "doctype": "DocField", 
+  "fieldname": "mysql_root_password", 
+  "fieldtype": "Password", 
+  "label": "Mysql Root Password"
  }, 
  {
   "doctype": "DocPerm"
