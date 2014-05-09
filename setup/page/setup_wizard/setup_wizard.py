@@ -121,6 +121,8 @@ def set_defaults(args):
 		'default_company':args.get('company_name'),
 		'date_format': webnotes.conn.get_value("Country", args.get("country"), "date_format"),
 		"float_precision": 3,
+		"is_active":1,
+		"max_users":5,
 		"country": args.get("country"),
 		"time_zone": args.get("time_zone")
 	})

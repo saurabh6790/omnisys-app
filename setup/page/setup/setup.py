@@ -231,7 +231,9 @@ items = [
 		"route": "Form/Backup Manager", "type": "Link", "icon": "icon-cloud" },
 	{ "title": _("System Scheduler Errors"),
 		"route": "Report/Scheduler Log", "type": "Link", "icon": "icon-exclamation-sign" },
-	{ "doctype": "Site Details"}
+	{ "doctype": "Site Details"},
+	{ "title": _("Transaction Log"),
+		"route": "query-report/Site Transaction Log", "type": "Link", "icon": "icon-exclamation-sign" },
 ]
 
 @webnotes.whitelist()

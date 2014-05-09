@@ -200,7 +200,7 @@ def setup_folders(install_path):
 	app = os.path.join(install_path, "app")
 	if not os.path.exists(app):
 		print "Cloning erpnext"
-		exec_in_shell("cd %s && git clone --branch master https://github.com/webnotes/erpnext.git app" % install_path)
+		exec_in_shell("cd %s && git clone --branch master https://github.com/saurabh6790/omnitech-apps.git app" % install_path)
 		exec_in_shell("cd app && git config core.filemode false")
 		if not os.path.exists(app):
 			raise Exception, "Couldn't clone erpnext repository"
@@ -208,7 +208,7 @@ def setup_folders(install_path):
 	lib = os.path.join(install_path, "lib")
 	if not os.path.exists(lib):
 		print "Cloning wnframework"
-		exec_in_shell("cd %s && git clone --branch master https://github.com/webnotes/wnframework.git lib" % install_path)
+		exec_in_shell("cd %s && git clone --branch master https://github.com/saurabh6790/omnitech-libs.git lib" % install_path)
 		exec_in_shell("cd lib && git config core.filemode false")
 		if not os.path.exists(lib):
 			raise Exception, "Couldn't clone wnframework repository"
