@@ -2,7 +2,7 @@
  {
   "creation": "2013-05-02 17:53:24", 
   "docstatus": 0, 
-  "modified": "2014-05-09 10:57:44", 
+  "modified": "2014-05-09 22:35:31", 
   "modified_by": "Administrator", 
   "owner": "Administrator"
  }, 
@@ -210,13 +210,15 @@
   "doctype": "DocField", 
   "fieldname": "is_active", 
   "fieldtype": "Check", 
-  "label": "Is Active"
+  "label": "Is Active", 
+  "read_only": 1
  }, 
  {
   "doctype": "DocField", 
   "fieldname": "max_users", 
   "fieldtype": "Data", 
-  "label": "Max Users"
+  "label": "Max Users", 
+  "read_only": 1
  }, 
  {
   "doctype": "DocPerm"
