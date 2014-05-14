@@ -85,5 +85,44 @@
 	</div>
 	</div>
 	{%- endif %}
+	<div><button id="gateway" onclick="gateway()">Payment {{ utils.fmt_money(doc.rounded_total_export, currency=doc.currency) }}</button></div>
 </div>
+{% endblock %}
+
+{% block javascript -%}
+<script type="text/javascript">
+	function gateway () {
+		amt=($('#gateway').html()).split('Payment')
+		var myWindow = window.open("", "MsgWindow", "width=900, height=500");
+    	myWindow.document.write("<html>\
+    		<head>\
+			<style>\
+			ul\
+			{\
+			list-style-type:none;\
+			margin:0;\
+			padding:0;\
+			}\
+			</style>\
+			</head>\
+    		<body>\
+    		<div  style='float:left;width:50%'>\
+    		<ul style='font-size:25px'>\
+    		<li><a href='#'>Cash on Delivery</a></li>\
+    		<li><a href='#'>Net Banking</a></li>\
+    		<li><a href='#'>Credit Card</a></li>\
+    		<li><a href='#'>EMI</a></li>\
+    		<li><a href='#'>Debit Card</a></li>\
+    		<li><a href='#'>e Gift Voucher</a></li>\
+    		</ul>\
+    		</div>\
+    		<div style='float:right;width:50%;text-align:center'>\
+    		<p>Total "+amt[1]+"</p>\
+    		<p style='font-size:20px'>Amount Payble</p>\
+    		<p style='font-size:20px'>"+amt[1]+"</p>\
+    		</div>\
+    		<div style='width:100%;float:left;text-align:center'><button style='border-radius: 28px;font-family: Arial;color:#3498db;font-size:20px'>CONFIRM ORDER</button></div>\
+    		</body></html>");
+	}
+</script>
 {% endblock %}

@@ -15,7 +15,7 @@ $(document).ready(function() {
 	var render = function(doc) {
 		doc.grand_total_export = format_currency(doc.grand_total_export, doc.currency);
 		if(!doc.status) doc.status = "";
-		
+		console.log(doc)
 		$(repl('<a href="{{ page }}?name=%(name)s" class="list-group-item">\
 				<div class="row">\
 					<div class="col-md-6">\
@@ -26,7 +26,7 @@ $(document).ready(function() {
 					<div class="col-md-3 text-right">%(grand_total_export)s</div>\
 					<div class="col-md-3 text-right text-muted">%(creation)s</div>\
 				</div>\
-			</a>', doc)).appendTo($list);
+			</a><div></div>', doc)).appendTo($list);
 	};
 </script>
 {%- endblock %}
